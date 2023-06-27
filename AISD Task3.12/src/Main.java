@@ -4,17 +4,28 @@ import static java.util.Collections.reverse;
 
 public class Main {
     public static void main(String[] args) {
-        Stack<String> stack = new Stack<>();
-        stack.push("Мы");
-        stack.push("Bebra");
-        stack.push("IT");
-        stack.push("Company");
+        Stack<String> javaStack = new Stack<>();
+        javaStack.push("Мы");
+        javaStack.push("Bebra");
+        javaStack.push("IT");
+        javaStack.push("Company");
 
-        System.out.println("Исходный стек: " + stack);
+        LinkedListStack<String> customStack = new LinkedListStack<>();
+        customStack.push("Мы");
+        customStack.push("Bebra");
+        customStack.push("IT");
+        customStack.push("Company");
 
-        reverse(stack);
+        System.out.println("Исходный стек: " + javaStack);
 
-        System.out.println("Перевёрнутый стек: " + stack);
-//        System.out.println("Перевёрнутый стек: " + StackReverse.reverseStack(stack));
+        reverse(javaStack);
+
+        System.out.println("Перевёрнутый стек: " + javaStack);
+
+        System.out.println("Исходный стек: " + customStack);
+
+        customStack.reverseStack();
+
+        System.out.println("Перевёрнутый стек: " + customStack);
     }
 }
